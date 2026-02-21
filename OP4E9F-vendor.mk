@@ -8,10 +8,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     vendor/oppo/OP4E9F/proprietary/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    vendor/oppo/OP4E9F/proprietary/lib/vendor.oplus.hardware.cammidasservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.oplus.hardware.cammidasservice@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/lib64/vendor.oplus.hardware.cammidasservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.oplus.hardware.cammidasservice@1.0.so \
     vendor/oppo/OP4E9F/proprietary/odm/bin/hw/android.hardware.drm@1.3-service.widevine:$(TARGET_COPY_OUT_ODM)/bin/hw/android.hardware.drm@1.3-service.widevine \
     vendor/oppo/OP4E9F/proprietary/odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service:$(TARGET_COPY_OUT_ODM)/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service \
+    vendor/oppo/OP4E9F/proprietary/odm/bin/vl53l1_daemon_main:$(TARGET_COPY_OUT_ODM)/bin/vl53l1_daemon_main \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/Audio_Parameter_Version.txt:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Audio_Parameter_Version.txt \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/General_cal.acdb \
@@ -20,6 +19,321 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/Hdmi_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Hdmi_cal.acdb \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/Headset_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Headset_cal.acdb \
     vendor/oppo/OP4E9F/proprietary/odm/etc/acdbdata/Speaker_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Speaker_cal.acdb \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/CameraHWConfiguration.config:$(TARGET_COPY_OUT_ODM)/etc/camera/CameraHWConfiguration.config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/DAC_code.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/DAC_code.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode:$(TARGET_COPY_OUT_ODM)/etc/camera/M_Attribute_AG_BMW_1.1.0.model.hardcode \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/anc/merged_model:$(TARGET_COPY_OUT_ODM)/etc/camera/anc/merged_model \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/anc/merged_model_post:$(TARGET_COPY_OUT_ODM)/etc/camera/anc/merged_model_post \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/anc_cl_kernel.cache:$(TARGET_COPY_OUT_ODM)/etc/camera/anc_cl_kernel.cache \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/asd/class.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/asd/class.dlc \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/asd/detect.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/asd/detect.dlc \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/ashdr/ncf_pack.ncf:$(TARGET_COPY_OUT_ODM)/etc/camera/ashdr/ncf_pack.ncf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/calibrationCfg.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/calibrationCfg.xml \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/camera_engmode.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/camera_engmode.xml \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/cfr_bin/CFR_OPlus_EF017_UW_snapshot.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/cfr_bin/CFR_OPlus_EF017_UW_snapshot.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/camera_unit_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/camera_unit_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/camera_unit_feature_config.protobuf:$(TARGET_COPY_OUT_ODM)/etc/camera/config/camera_unit_feature_config.protobuf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/hi846:$(TARGET_COPY_OUT_ODM)/etc/camera/config/hi846 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/imx615:$(TARGET_COPY_OUT_ODM)/etc/camera/config/imx615 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/oplus_camera_algo_switch_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_algo_switch_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/oplus_camera_aps_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_aps_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/oplus_camera_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/oplus_camera_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/ov24b:$(TARGET_COPY_OUT_ODM)/etc/camera/config/ov24b \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/ov64b:$(TARGET_COPY_OUT_ODM)/etc/camera/config/ov64b \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/config/video_beauty_default_config:$(TARGET_COPY_OUT_ODM)/etc/camera/config/video_beauty_default_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/darksight/darksight_main.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/darksight/darksight_main.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/darksight/darksight_ultrawide.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/darksight/darksight_ultrawide.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/distortionParams.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/distortionParams.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/eis_camera.vcfg:$(TARGET_COPY_OUT_ODM)/etc/camera/eis_camera.vcfg \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/engineer_camera_config:$(TARGET_COPY_OUT_ODM)/etc/camera/engineer_camera_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_default:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_default \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/000.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/000.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/000_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/000_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/001.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/001.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/001_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/001_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/002.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/002.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/002_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/002_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/003.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/003.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/003_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/003_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/010.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/010.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/010_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/010_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/011.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/011.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/011_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/011_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/012.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/012.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/012_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/012_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/013.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/013.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/100.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/100.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/100_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/100_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/101.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/101.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/101_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/101_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/102.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/102.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/102_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/102_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/103.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/103.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/103_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/103_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/110.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/110.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/110_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/110_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/111.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/111.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/111_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/111_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/112.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/112.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/112_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/112_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/113.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/113.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/200.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/200.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/200_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/200_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/201.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/201.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/201_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/201_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/202.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/202.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/202_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/202_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/203.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/203.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/203_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/203_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/210.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/210.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/210_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/210_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/211.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/211.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/211_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/211_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/212.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/212.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/212_pre.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/212_pre.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/213.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/213.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/beauty_body.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/beauty_body.dlc \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/eyeBright.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/eyeBright.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/eyesMask.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/eyesMask.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/face_retouch_chinese.dlc:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/face_retouch_chinese.dlc \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs00.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs00.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs01.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs01.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs02.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs02.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs03.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs03.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs10.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs10.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs11.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs11.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs12.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs12.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs13.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs13.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_00.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_00.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_01.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_01.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_02.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_02.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_03.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_03.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_10.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_10.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_11.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_11.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_12.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_12.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinLUTs_yuv16_13.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinLUTs_yuv16_13.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinmask.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinmask.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fb_model/skinmask.png:$(TARGET_COPY_OUT_ODM)/etc/camera/fb_model/skinmask.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fdc_cl.cache:$(TARGET_COPY_OUT_ODM)/etc/camera/fdc_cl.cache \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/B1VLf4peM:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/B1VLf4peM \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/B1aMqioxf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/B1aMqioxf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/B1nmcmWbG:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/B1nmcmWbG \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/B1si_XbZz:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/B1si_XbZz \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/B612Pretty.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/B612Pretty.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/BJJAwoigM:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/BJJAwoigM \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/BJyKIwqxz:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/BJyKIwqxz \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/BeautyplusMellow-5.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/BeautyplusMellow-5.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/ByW7g4bbf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/ByW7g4bbf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/ByYo3If:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/ByYo3If \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/BycYf7WWz:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/BycYf7WWz \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/DL_D_G4.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/DL_D_G4.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/DL_L_B6.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/DL_L_B6.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Emerald.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Emerald.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/EyxRbD2UCe:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/EyxRbD2UCe \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/FaceappGrayscale.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/FaceappGrayscale.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/InsClarendon.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/InsClarendon.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/InsJuno.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/InsJuno.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/InsValencia-2.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/InsValencia-2.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Martin.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Martin.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/OPLUSR0604.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/OPLUSR0604.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/PP1-soft-2.6.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/PP1-soft-2.6.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/PP2-pop-4.1.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/PP2-pop-4.1.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/PP3-mono-3.3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/PP3-mono-3.3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Radiance.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Radiance.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/SJ3mbr6ef:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/SJ3mbr6ef \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Serenity.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Serenity.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/SkpZ8ebbz:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/SkpZ8ebbz \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/SnapseedBright.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/SnapseedBright.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/SweetSnapAlice-3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/SweetSnapAlice-3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Sy4uLSTgf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Sy4uLSTgf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/Syt2KeZZf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/Syt2KeZZf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/V01-landscape-2.6.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/V01-landscape-2.6.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/V02-portrait-2.5.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/V02-portrait-2.5.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/V03-food-2.0.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/V03-food-2.0.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/V04-night-1.3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/V04-night-1.3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/V05-mono-3.3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/V05-mono-3.3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/YoucamAdorable80.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/YoucamAdorable80.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/b-w-P8.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/b-w-P8.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/black_gold.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/black_gold.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/blackandwhite.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/blackandwhite.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/bowu-2.1.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/bowu-2.1.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/bright_coloured.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/bright_coloured.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/calm-V5.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/calm-V5.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/candy-P7.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/candy-P7.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/cola.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/cola.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/cyberpunk-kitsch-3.1.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/cyberpunk-kitsch-3.1.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/cyberpunk-neoMilitarism-2.4-final.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/cyberpunk-neoMilitarism-2.4-final.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/default:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/default \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/delight-P3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/delight-P3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/delight-V1.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/delight-V1.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/drjw1994.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/drjw1994.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/drjw2010.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/drjw2010.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/f_bin_hideaki:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/f_bin_hideaki \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/f_candy_water_weak.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/f_candy_water_weak.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/f_contrast_gray_face_dark:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/f_contrast_gray_face_dark \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/f_fuji_strong.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/f_fuji_strong.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/f_japan_strong.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/f_japan_strong.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/farewell-V7.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/farewell-V7.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/fuji-eterna-v2.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/fuji-eterna-v2.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/fuji.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/fuji.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/gourmet.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/gourmet.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/interstellar_space.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/interstellar_space.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/jiari-2.0.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/jiari-2.0.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/jw_sun.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/jw_sun.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/jw_surprise.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/jw_surprise.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/kodak.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/kodak.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/lvtu-2.0.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/lvtu-2.0.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/meiwei-2.2.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/meiwei-2.2.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/mellow-V3.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/mellow-V3.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/misty-P5.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/misty-P5.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/misty-V4.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/misty-V4.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/mono.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/mono.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/morandi.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/morandi.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/natural-P1.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/natural-P1.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/natural.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/natural.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/neon-2020.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/neon-2020.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-black-gold.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-black-gold.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-cyberpunk.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-cyberpunk.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-nightcity.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-nightcity.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-r-black-gold-1.1-RGB.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-r-black-gold-1.1-RGB.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-r-cyberpunk-RGB.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-r-cyberpunk-RGB.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-r-infra-RGB.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-r-infra-RGB.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus-yellow-blue.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus-yellow-blue.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_SAREK_III.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_SAREK_III.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_VAEROY_III.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_VAEROY_III.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_YLLAAS.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_YLLAAS.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_r4.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_r4.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_r5.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_r5.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_r6.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_r6.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_black_and_white:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_black_and_white \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_highlight:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_highlight \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_ins:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_ins \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_natal:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_natal \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_olympus:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_olympus \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_plain:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_plain \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_show:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_show \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_solar:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_solar \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_strong:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_strong \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oplus_video_filter_west:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oplus_video_filter_west \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_black_and_white:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_black_and_white \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_highlight:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_highlight \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_ins:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_ins \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_natal:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_natal \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_olympus:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_olympus \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_plain:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_plain \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_show:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_show \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_solar:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_solar \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_strong:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_strong \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/oppo_video_filter_west:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/oppo_video_filter_west \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/p4_1.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/p4_1.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/p4_2.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/p4_2.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/p4_3.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/p4_3.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/p4_4.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/p4_4.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/qiuri-2.0.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/qiuri-2.0.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/r1JaFSZZG:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/r1JaFSZZG \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/r1PrfoolG:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/r1PrfoolG \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/rJ5g5vPWG:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/rJ5g5vPWG \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/rJxJtmaez:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/rJxJtmaez \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/red-red.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/red-red.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/rkMhq4ZWf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/rkMhq4ZWf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/rkx5u4Zbf:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/rkx5u4Zbf \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/senlin-2.0.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/senlin-2.0.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/serene-P9.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/serene-P9.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/sky-blue.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/sky-blue.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/sweet-P2.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/sweet-P2.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/sweet-V2.CUBE.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/sweet-V2.CUBE.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/tree-green.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/tree-green.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/type_fuji_acros:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/type_fuji_acros \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/type_fuji_astia:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/type_fuji_astia \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/type_fuji_chrome:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/type_fuji_chrome \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/type_fuji_provia:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/type_fuji_provia \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/type_fuji_velvia:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/type_fuji_velvia \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/vivid-cool.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/vivid-cool.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/vivid-lut.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/vivid-lut.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/vivid-warm.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/vivid-warm.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_lut/yuanqi-2.2s.cube.rgb.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_lut/yuanqi-2.2s.cube.rgb.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_res/film_grain_small.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_res/film_grain_small.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_res/lut_all_points.png:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_res/lut_all_points.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/filters_res/overlay_p4_3_weak.png:$(TARGET_COPY_OUT_ODM)/etc/camera/filters_res/overlay_p4_3_weak.png \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/fwk_config.json:$(TARGET_COPY_OUT_ODM)/etc/camera/fwk_config.json \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/gasryuv_1.2_wp.model:$(TARGET_COPY_OUT_ODM)/etc/camera/gasryuv_1.2_wp.model \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/inputparam.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/inputparam.xml \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/model/DocDetectV15.xbin:$(TARGET_COPY_OUT_ODM)/etc/camera/model/DocDetectV15.xbin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/model/license.lic:$(TARGET_COPY_OUT_ODM)/etc/camera/model/license.lic \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/model_fdc.data:$(TARGET_COPY_OUT_ODM)/etc/camera/model_fdc.data \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/mwStereoParams.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/mwStereoParams.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/oppo_camera_algo_switch_config:$(TARGET_COPY_OUT_ODM)/etc/camera/oppo_camera_algo_switch_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/oppo_camera_config:$(TARGET_COPY_OUT_ODM)/etc/camera/oppo_camera_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/oppo_camera_zoom_config:$(TARGET_COPY_OUT_ODM)/etc/camera/oppo_camera_zoom_config \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/BeardSharp.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/BeardSharp.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/BeardSharp.frag:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/BeardSharp.frag \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/BeardSharp.vert:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/BeardSharp.vert \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreAddSRBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreAddSRBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreCalVarBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreCalVarBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreCalcSRBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreCalcSRBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreDepouchBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreDepouchBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreEyeMeanBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreEyeMeanBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreHighPassBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreHighPassBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreHighPassPreBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreHighPassPreBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreHoriFilterBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreHoriFilterBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreMakeupBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreMakeupBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreMakeupMultiFaceBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreMakeupMultiFaceBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreMakeupSingleFaceBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreMakeupSingleFaceBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreMorphBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreMorphBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreOnlywhitenBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreOnlywhitenBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreSkintuneBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreSkintuneBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreSkintuneMRTBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreSkintuneMRTBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreSurfaceBlurBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreSurfaceBlurBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreVertFilterBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreVertFilterBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/PreVertSurBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/PreVertSurBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinCalcHue.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinCalcHue.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinCalcHue.frag:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinCalcHue.frag \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinCalcHue.vert:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinCalcHue.vert \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorBlur.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorBlur.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorBlur.frag:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorBlur.frag \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorBlur.vert:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorBlur.vert \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorUnify.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorUnify.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorUnify.frag:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorUnify.frag \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinColorUnify.vert:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinColorUnify.vert \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinHueUnify.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinHueUnify.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinHueUnify.frag:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinHueUnify.frag \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/SkinHueUnify.vert:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/SkinHueUnify.vert \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreHoriFilterBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreHoriFilterBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreMorphBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreMorphBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreOnlywhitenBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreOnlywhitenBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreSkintuneBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreSkintuneBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreSkintuneMRTBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreSkintuneMRTBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreVertFilterBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreVertFilterBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/pfb_bin/ThirdPartyPreVertSurBinary.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/pfb_bin/ThirdPartyPreVertSurBinary.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/settings_fdc.txt:$(TARGET_COPY_OUT_ODM)/etc/camera/settings_fdc.txt \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/stereoParams_aftersale.bin:$(TARGET_COPY_OUT_ODM)/etc/camera/stereoParams_aftersale.bin \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/sticker/M_SenseME_Action_5.2.12.model:$(TARGET_COPY_OUT_ODM)/etc/camera/sticker/M_SenseME_Action_5.2.12.model \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/sticker/material/animoji/data.zip:$(TARGET_COPY_OUT_ODM)/etc/camera/sticker/material/animoji/data.zip \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/sticker/material/animoji/snowleopard_v_0_0_0_9.zip:$(TARGET_COPY_OUT_ODM)/etc/camera/sticker/material/animoji/snowleopard_v_0_0_0_9.zip \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_0:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_0 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_1:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_1 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_10:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_10 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_2:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_2 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_3:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_3 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_4:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_4 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_5:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_5 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_6:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_6 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_7:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_7 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_8:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_8 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/curve_lut_9:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/curve_lut_9 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/list.txt:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/list.txt \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/s_curve_lut:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/s_curve_lut \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_0:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_0 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_1:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_1 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_10:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_10 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_2:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_2 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_3:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_3 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_4:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_4 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_5:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_5 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_6:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_6 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_7:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_7 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_8:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_8 \
+    vendor/oppo/OP4E9F/proprietary/odm/etc/camera/tonemap/tonemap_lut_9:$(TARGET_COPY_OUT_ODM)/etc/camera/tonemap/tonemap_lut_9 \
     vendor/oppo/OP4E9F/proprietary/odm/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/oppo/OP4E9F/proprietary/odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc \
     vendor/oppo/OP4E9F/proprietary/odm/etc/izat.conf:$(TARGET_COPY_OUT_ODM)/etc/izat.conf \
@@ -35,24 +349,8 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/odm/firmware/tp/20127/FW_FT3518_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20127/FW_FT3518_SAMSUNG.img \
     vendor/oppo/OP4E9F/proprietary/odm/firmware/tp/20127/FW_FT3518_SAMSUNG_FAE.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20127/FW_FT3518_SAMSUNG_FAE.img \
     vendor/oppo/OP4E9F/proprietary/odm/firmware/tp/20127/LIMIT_FT3518_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/20127/LIMIT_FT3518_SAMSUNG.img \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/camera/components/com.qti.stats.afd.so:$(TARGET_COPY_OUT_ODM)/lib/camera/components/com.qti.stats.afd.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libVideoEnhance.so:$(TARGET_COPY_OUT_ODM)/lib/libVideoEnhance.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/lib_rectify.so:$(TARGET_COPY_OUT_ODM)/lib/lib_rectify.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_distortion_correction.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_distortion_correction.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_hdr_denoise_api.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_hdr_denoise_api.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_high_dynamic_range.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_hta.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_hta.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_lensstaindetection.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_lensstaindetection.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_low_light_hdr.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_portrait_super_night_raw.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_portrait_super_night_raw.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_scbokeh_video.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_scbokeh_video.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_smart_denoise.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_ODM)/lib/libarcsoft_super_night_raw.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib/libaudioEngineerTest.so:$(TARGET_COPY_OUT_ODM)/lib/libaudioEngineerTest.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libhwconfigurationutil.so:$(TARGET_COPY_OUT_ODM)/lib/libhwconfigurationutil.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/liblvimfs_wrapper.so:$(TARGET_COPY_OUT_ODM)/lib/liblvimfs_wrapper.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libmpbase.so:$(TARGET_COPY_OUT_ODM)/lib/libmpbase.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/libosensehalclient.so:$(TARGET_COPY_OUT_ODM)/lib/libosensehalclient.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib/libc++_shared.so:$(TARGET_COPY_OUT_ODM)/lib/libc++_shared.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib/rfsa/adsp/libc++.so.1:$(TARGET_COPY_OUT_ODM)/lib/rfsa/adsp/libc++.so.1 \
     vendor/oppo/OP4E9F/proprietary/odm/lib/rfsa/adsp/libc++abi.so.1:$(TARGET_COPY_OUT_ODM)/lib/rfsa/adsp/libc++abi.so.1 \
     vendor/oppo/OP4E9F/proprietary/odm/lib/rfsa/adsp/libktvdrc.so:$(TARGET_COPY_OUT_ODM)/lib/rfsa/adsp/libktvdrc.so \
@@ -63,7 +361,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/odm/lib/rfsa/adsp/libktvreverb.so:$(TARGET_COPY_OUT_ODM)/lib/rfsa/adsp/libktvreverb.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib/rfsa/adsp/libktvvolume.so:$(TARGET_COPY_OUT_ODM)/lib/rfsa/adsp/libktvvolume.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.orms@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib/vendor.oplus.hardware.osense.client@1.0.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.osense.client@1.0.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/com.qti.sensor.hi846.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.sensor.hi846.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/com.qti.sensor.imx615.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.sensor.imx615.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/com.qti.sensor.ov02b.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.sensor.ov02b.so \
@@ -85,16 +382,40 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/components/com.oplus.node.videoenhance.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/components/com.oplus.node.videoenhance.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/components/com.qti.node.remosaic.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/components/com.qti.node.remosaic.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/camera/components/com.qti.stats.afd.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/components/com.qti.stats.afd.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libCOppLceTonemapAPI.so:$(TARGET_COPY_OUT_ODM)/lib64/libCOppLceTonemapAPI.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libDeVIS.so:$(TARGET_COPY_OUT_ODM)/lib64/libDeVIS.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libEIS.so:$(TARGET_COPY_OUT_ODM)/lib64/libEIS.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libFaceBeautyCap.so:$(TARGET_COPY_OUT_ODM)/lib64/libFaceBeautyCap.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libFaceBeautyPre.so:$(TARGET_COPY_OUT_ODM)/lib64/libFaceBeautyPre.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libFaceDistortionCorrection.so:$(TARGET_COPY_OUT_ODM)/lib64/libFaceDistortionCorrection.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libOGLManager.so:$(TARGET_COPY_OUT_ODM)/lib64/libOGLManager.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libOPLUS_SCPortrait.so:$(TARGET_COPY_OUT_ODM)/lib64/libOPLUS_SCPortrait.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libPerfectlyClearCrux.so:$(TARGET_COPY_OUT_ODM)/lib64/libPerfectlyClearCrux.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libPerfectlyClearCruxOpt.so:$(TARGET_COPY_OUT_ODM)/lib64/libPerfectlyClearCruxOpt.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libPolarrRender.so:$(TARGET_COPY_OUT_ODM)/lib64/libPolarrRender.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libPreviewDecisionOld.so:$(TARGET_COPY_OUT_ODM)/lib64/libPreviewDecisionOld.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libSNPE.so:$(TARGET_COPY_OUT_ODM)/lib64/libSNPE.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libSNPE_G.so:$(TARGET_COPY_OUT_ODM)/lib64/libSNPE_G.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libSonyIMX471RmscLibrary.so:$(TARGET_COPY_OUT_ODM)/lib64/libSonyIMX471RmscLibrary.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDBayerHDR.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDBayerHDR.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDBlurless.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDBlurless.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDDualCameraBlurlessAPI.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDDualCameraBlurlessAPI.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDExternal.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDExternal.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDPostureDetection.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDPostureDetection.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDSuperPhotoAPI.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDSuperPhotoAPI.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libVDUpScale.so:$(TARGET_COPY_OUT_ODM)/lib64/libVDUpScale.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libVideoEnhance.so:$(TARGET_COPY_OUT_ODM)/lib64/libVideoEnhance.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libWaterMark.so:$(TARGET_COPY_OUT_ODM)/lib64/libWaterMark.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libWaterMode.so:$(TARGET_COPY_OUT_ODM)/lib64/libWaterMode.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/lib_rectify.so:$(TARGET_COPY_OUT_ODM)/lib64/lib_rectify.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarc_eis.so:$(TARGET_COPY_OUT_ODM)/lib64/libarc_eis.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarc_eis_custom.so:$(TARGET_COPY_OUT_ODM)/lib64/libarc_eis_custom.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libaisal.so:$(TARGET_COPY_OUT_ODM)/lib64/libaisal.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libancbase_segment.so:$(TARGET_COPY_OUT_ODM)/lib64/libancbase_segment.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libaps_frame_registration.so:$(TARGET_COPY_OUT_ODM)/lib64/libaps_frame_registration.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libapsdarksight.so:$(TARGET_COPY_OUT_ODM)/lib64/libapsdarksight.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libapsexif.so:$(TARGET_COPY_OUT_ODM)/lib64/libapsexif.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libapsjpeg.so:$(TARGET_COPY_OUT_ODM)/lib64/libapsjpeg.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_distortion_correction.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_distortion_correction.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_bokeh_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_bokeh_api.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_bokeh_frt_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_bokeh_frt_api.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_refocus_frt_image.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_refocus_frt_image.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_refocus_frt_preview.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_refocus_frt_preview.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_refocus_left.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_refocus_left.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_refocus_preview.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_refocus_preview.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_dualcam_refocus_uw.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_dualcam_refocus_uw.so \
@@ -103,24 +424,40 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_hdrplus_hvx_stub.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_hdrplus_hvx_stub.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_high_dynamic_range.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_high_dynamic_range.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_high_dynamic_range_couple.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_high_dynamic_range_couple.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_hta.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_hta.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_lensstaindetection.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_lensstaindetection.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_low_light_hdr.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_low_light_hdr.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_low_light_hdr_for_neon.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_low_light_hdr_for_neon.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_portraitSN_hvx_stub.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_portraitSN_hvx_stub.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_portrait_super_night_raw.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_portrait_super_night_raw.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_preview_antibanding.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_preview_antibanding.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_scbokeh_video.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_scbokeh_video.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_smart_denoise.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_smart_denoise.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_super_night_raw.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_super_night_raw.so \
-    vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_supervideostabilization.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_supervideostabilization.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libarcsoft_videoautozoom.so:$(TARGET_COPY_OUT_ODM)/lib64/libarcsoft_videoautozoom.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libc++_shared.so:$(TARGET_COPY_OUT_ODM)/lib64/libc++_shared.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libcvface_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libcvface_api.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libfastov_dsp.so:$(TARGET_COPY_OUT_ODM)/lib64/libfastov_dsp.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libhta.so:$(TARGET_COPY_OUT_ODM)/lib64/libhta.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libhwconfigurationutil.so:$(TARGET_COPY_OUT_ODM)/lib64/libhwconfigurationutil.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libhyperlapse.so:$(TARGET_COPY_OUT_ODM)/lib64/libhyperlapse.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libml_util.so:$(TARGET_COPY_OUT_ODM)/lib64/libml_util.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libmpbase.so:$(TARGET_COPY_OUT_ODM)/lib64/libmpbase.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libop-ai-beauty-body-detection.so:$(TARGET_COPY_OUT_ODM)/lib64/libop-ai-beauty-body-detection.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libop-ai-beauty-faceretouch-cn.so:$(TARGET_COPY_OUT_ODM)/lib64/libop-ai-beauty-faceretouch-cn.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libormshalclient.so:$(TARGET_COPY_OUT_ODM)/lib64/libormshalclient.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libosensehalclient.so:$(TARGET_COPY_OUT_ODM)/lib64/libosensehalclient.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libsnpe_loader.so:$(TARGET_COPY_OUT_ODM)/lib64/libsnpe_loader.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libsnpeml.so:$(TARGET_COPY_OUT_ODM)/lib64/libsnpeml.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libstblur_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libstblur_api.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libstblur_capture_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libstblur_capture_api.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libstface_fd_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libstface_fd_api.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libstfd_mobile_api.so:$(TARGET_COPY_OUT_ODM)/lib64/libstfd_mobile_api.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libvl53l1_daemon.so:$(TARGET_COPY_OUT_ODM)/lib64/libvl53l1_daemon.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/libwatermark_photo.so:$(TARGET_COPY_OUT_ODM)/lib64/libwatermark_photo.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/libwvhidl.so:$(TARGET_COPY_OUT_ODM)/lib64/libwvhidl.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_ODM)/lib64/mediadrm/libwvdrmengine.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/sensors.hal.tof.so:$(TARGET_COPY_OUT_ODM)/lib64/sensors.hal.tof.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/vendor.oplus.hardware.appradio@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.appradio@1.0.so \
+    vendor/oppo/OP4E9F/proprietary/odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/vendor.oplus.hardware.ims@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.ims@1.0.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.oplusSensor@1.0.so \
     vendor/oppo/OP4E9F/proprietary/odm/lib64/vendor.oplus.hardware.orms@1.0.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.orms@1.0.so \
@@ -176,9 +513,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsinkinterface.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsrc.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libwfduibcsrcinterface.so \
-    vendor/oppo/OP4E9F/proprietary/system_ext/lib/vendor.oplus.hardware.virtual_device.camera.manager@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.oplus.hardware.virtual_device.camera.manager@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.diaghal@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/system_ext/lib/vendor.qti.hardware.seccam@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.seccam@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvideocodec.so \
@@ -210,10 +545,8 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/libwfduibcsinkinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsinkinterface.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/libwfduibcsrc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrc.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/libwfduibcsrcinterface.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfduibcsrcinterface.so \
-    vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.dpmservice@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.qti.hardware.seccam@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.seccam@1.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/oppo/OP4E9F/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.1.so \
     vendor/oppo/OP4E9F/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
@@ -507,58 +840,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/firmware/lagoon_ipa_fws.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/lagoon_ipa_fws.elf \
     vendor/oppo/OP4E9F/proprietary/vendor/firmware/lagoon_ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/lagoon_ipa_fws.mdt \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.truly_cmb433.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.camx.chiiqutils.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.eisv2.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.eisv3.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.hvx.addconstant.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.hvx.addconstant.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.hvx.binning.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.hvx.binning.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.customhwnode.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.customhwnode.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.depth.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.depth.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.dummyrtb.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.dummyrtb.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.dummysat.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.dummysat.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.eisv2.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.eisv3.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.eisv3.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.fcv.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.fcv.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.gpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.gpu.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.memcpy.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.memcpy.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.stich.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.stich.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.swec.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.swec.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.swfusion.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.swfusion.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.node.swregistration.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.node.swregistration.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.aec.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.aecwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.aecwrapper.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.af.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.afwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.afwrapper.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.asd.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.asd.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.awb.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.awbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.awbwrapper.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.haf.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.haf.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.hafoverride.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.hafoverride.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.pdlib.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.pdlibsony.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.pdlibsony.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.pdlibwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.pdlibwrapper.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qti.stats.tracker.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qti.stats.tracker.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qtistatic.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qtistatic.stats.aec.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qtistatic.stats.af.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qtistatic.stats.af.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qtistatic.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qtistatic.stats.awb.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/com.qtistatic.stats.pdlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/com.qtistatic.stats.pdlib.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/camera/components/libdepthmapwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/components/libdepthmapwrapper.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.anchorsync.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.anchorsync.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.demux.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.demux.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.frameselect.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.frameselect.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.fusion.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.generic.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.generic.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.gs.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.gs.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.hdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.hdr.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.memcpy.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.memcpy.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.mfsr.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.mfsr.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.qcfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.qcfa.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.rawhdr.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.rawhdr.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.rt.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.rt.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.serializer.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.serializer.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.stub.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/com.qti.feature2.swmf.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qti.feature2.swmf.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/eglSubDriverAndroid.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/egl/libEGL_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libEGL_adreno.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_adreno.so \
@@ -566,8 +847,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_adreno.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libq3dtools_esx.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/audio.primary.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.lito.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.qcom.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qti.chi.override.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/sound_trigger.primary.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.lito.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so \
@@ -615,28 +894,13 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libaudcal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudcal.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudio_log_utils.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libaudioparsers.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaudioparsers.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbitmlengine.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libbluetooth_audio_session_qti_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session_qti_2_1.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2d30_bltlib.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_nn_stub.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxexternalformatutils.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfacialfeatures.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdalgo.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxfdengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdengine.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxifestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxifestriping.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamximageformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamximageformatutils.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxncs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxncs.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxstatscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxstatscore.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxswispiqmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxswispiqmodule.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxswprocessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxswprocessalgo.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcamxtintlessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxtintlessalgo.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svacnn.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libcdsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsp_default_listener.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcdsprpc.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchilog.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcom.qti.chinodeutils.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdiag.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsd2pcm.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsi_netctrl.so \
@@ -655,15 +919,11 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libllvm-glnext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-glnext.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libllvm-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libllvm-qcom.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmdsprpc.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libmidasserviceintf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmidasserviceintf.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmm-hdcpmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmm-hdcpmgr.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc2.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmosal.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmmrtpdecoder_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmrtpdecoder_proprietary.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmmrtpencoder_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmrtpencoder_proprietary.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libmulawdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmulawdec.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libofflinelog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libofflinelog.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfconfig.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libperfgluelayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfgluelayer.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libperfioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperfioctl.so \
@@ -690,8 +950,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libscveObjectTracker.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libscveObjectTracker_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscveObjectTracker_stub.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsdsprpc.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensorslog.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsapi.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libssrec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssrec.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswvdec.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsysmon_cdsp_skel.so \
@@ -786,16 +1044,10 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcreverb.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/soundfx/libqcvirt.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libqcvirt.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libshoebox.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.oplus.hardware.cammidasservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.cammidasservice@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.oplus.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.commondcs@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.oplus.hardware.performance@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.oplus.hardware.performance@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.1.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.dsp@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.scve.objecttracker@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.scve.panorama@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.seccam@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.seccam@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.1.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.2.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.3.so \
@@ -949,6 +1201,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libc2d30_bltlib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2d30_bltlib.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcacertclient.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxexternalformatutils.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfacialfeatures.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgo.so \
@@ -994,6 +1247,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libhexagon_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhexagon_nn_stub.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libhta_hexagon_runtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhta_hexagon_runtime.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libipebpsstriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libipebpsstriping.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libizat_client_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_client_api.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libizat_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libizat_core.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libjnihelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjnihelper.so \
@@ -1022,6 +1276,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libmmosal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmosal.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libnanopb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnanopb.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_common.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libnetmgr_nr_fusion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_nr_fusion.so \
@@ -1030,6 +1285,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/liboemnvbk_img_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemnvbk_img_helper.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libofflinelog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libofflinelog.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libops.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libops.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libos.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libpdmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdmapper.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libpdnotifier.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpdnotifier.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libperfconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libperfconfig.so \
@@ -1100,9 +1356,12 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_default_listener.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswvdec.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libsynx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynx.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysmon_cdsp_skel.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/libtrustedapploader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtrustedapploader.so \
@@ -1130,6 +1389,7 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.display.color@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.4.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
+    vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.oplus.hardware.cameraextension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.cameraextension@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.oplus.hardware.cammidasservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.cammidasservice@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.oplus.hardware.commondcs@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.oplus.hardware.commondcs@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.pixelworks.hardware.display@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.pixelworks.hardware.display@1.0.so \
@@ -1199,9 +1459,6 @@ PRODUCT_COPY_FILES += \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.scve.panorama@1.0.so \
-    vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.seccam@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.seccam@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.slmadapter@1.0.so \
     vendor/oppo/OP4E9F/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
@@ -1257,4 +1514,5 @@ PRODUCT_PACKAGES += \
     manifest_oplus_vpp \
     vendor.qti.gnss@4.0-service \
     manifest_android.hardware.drm@1.3-service.widevine \
-    manifest_oplusSensor
+    manifest_oplusSensor \
+    manifest_oplus_cameraextension
