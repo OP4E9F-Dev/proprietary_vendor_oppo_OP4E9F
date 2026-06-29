@@ -298,7 +298,8 @@ prebuilt_etc_xml {
 
 install_symlink {
 	name: "com.qti.stats.afd_com.qti.stats.afd_symlink64",
-	installed_location: "/vendor/lib64/camera/components/com.qti.stats.afd.so",
+	soc_specific: true,
+	installed_location: "lib64/camera/components/com.qti.stats.afd.so",
 	symlink_target: "/odm/lib64/camera/components/com.qti.stats.afd.so",
 }
 
